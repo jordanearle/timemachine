@@ -74,6 +74,72 @@ a {
     z-index: 1;
 }
 
+.backbutton {
+  margin-left: 1em;
+  height: 50px;
+  width: 240px;
+  border-style: solid;
+  border-width: 5px;
+  text-align: center;
+  display: block;
+  color: #28F277;
+  text-decoration: none;
+  font-family: 'fixedsys_excelsior_3.01Rg';
+  font-size: 2.3em;
+  padding-top: 0.2em;
+  z-index: 5;
+  position: absolute;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 50%;}
+
+a.backbutton:hover {
+  height: 50px;
+  width: 240px;
+  background: #011006;
+  opacity: 0.1;
+  text-align: center;
+  margin-left: 1em;
+  display: block;
+  color: #00FF63;
+  font-family: 'fixedsys_excelsior_3.01Rg';
+  font-size: 2.3em;
+  animation: neon1 1s ease-in-out infinite alternate;}
+
+.forwardbutton {
+  margin-left: 38.5em;
+  height: 50px;
+  width: 240px;
+  border-style: solid;
+  border-width: 5px;
+  text-align: center;
+  display: block;
+  color: #28F277;
+  text-decoration: none;
+  font-family: 'fixedsys_excelsior_3.01Rg';
+  font-size: 2.3em;
+  padding-top: 0.2em;
+  z-index: 5;
+  position: absolute;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;}
+
+a.forwardbutton:hover {
+  margin-left: 38.5em;
+  transform: rotate(90deg);
+  height: 50px;
+  width: 240px;
+  background: #011006;
+  opacity: 0.1;
+  text-align: center;
+  opacity: 0.1;
+  display: block;
+  color: #00FF63;
+  font-family: 'fixedsys_excelsior_3.01Rg';
+  font-size: 2.3em;
+  animation: neon1 1s ease-in-out infinite alternate;}
+
 .timeanddate {
   margin: 0 auto;
   text-align: center;
@@ -117,7 +183,8 @@ a {
   height: 250px;
   width: 500px;
   background-color: #00FF69;
-  margin-bottom: 1.5em;}
+  margin-bottom: 1.5em;
+  opacity: 0.6; }
 
   a[href^="http://maps.google.com/maps"],
   a[href^="https://maps.google.com/maps"],
@@ -135,7 +202,8 @@ a {
 .weather {
   height: 468px;
   width: 500px;
-  background-color: #069335;}
+  background-color: #069335;
+  opacity: 0.8;}
 
 .byline {
   font-family: 'fixedsys_excelsior_3.01Rg';
@@ -145,9 +213,10 @@ a {
 
 .headline {
   font-family: 'terminalvectornormal';
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: #00FF69;
   text-decoration: underline;
+  text-transform: uppercase;
   margin-top: -0.5em;}
 
 .article {
