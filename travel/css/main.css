@@ -166,6 +166,41 @@ a {
   text-decoration: underline;
 }
 
+.weathersub {
+  font-family: 'fixedsys_excelsior_3.01Rg';
+  font-size: 2.5em;
+  color: #0B5228;
+  background-color: #00FF69;
+  width: 180px;
+  text-align: center;
+  margin-left: 0.5em;
+  margin-bottom: -0.4em;
+}
+
+.currencysub {
+  font-family: 'fixedsys_excelsior_3.01Rg';
+  font-size: 2.5em;
+  color: #0B5228;
+  background-color: #00FF69;
+  width: 200px;
+  text-align: center;
+  margin-left: 0.5em;
+  margin-bottom: -0.4em;
+}
+
+.detaillist {
+  list-style-type: square;
+  font-family: 'fixedsys_excelsior_3.01Rg';
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 1em;
+  color: #37F982;
+}
+
+li {
+  padding-bottom: 7px;
+}
+
 /*glow*/
 
 @keyframes neon1 {
