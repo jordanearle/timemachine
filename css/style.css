@@ -38,6 +38,7 @@
 html {
     overflow: hidden;
     height: 100%;
+    zoom: 75%;
 }
 
 body {
