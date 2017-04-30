@@ -76,9 +76,30 @@ function startTyping(textParam, delayParam, destinationParam)
     <div id="blocktext8" class="block3">9</div>
   </div>
   <div class="divider"></div>
-  <a href="http://designshack.net/" class="button">BEGIN <span class="blinking-cursor">_</span> </a>
+  <a href="#" onClick=" Randomlink ();" class="button">BEGIN <span class="blinking-cursor">_</span></a>
   <p ID="textDestination" class="Console">...</p>
 </div>
+
+<SCRIPT Language="Javascript">
+<!--
+function Randomlink()
+{
+    Url = new Array;
+    Url[1] = "travel/jfk.html";
+    Url[2] = "travel/tedbundy.html";
+    Url[3] = "travel/columbine.html";
+    Url[4] = "travel/moonlanding.html";
+    Url[5] = "travel/tonyblair.html";
+    Url[6] = "travel/hiroshima.html";
+    Url[7] = "travel/hitler.html";
+    Url[8] = "travel/pearlharbor.html";
+    Url[9] = "travel/titanic.html";
+    Url[10] = "travel/ww2.html";
+    Chooselink = Math.round(Math.random() * (Url.length+1));
+    window.open(Url[Chooselink],'_self');
+}
+//-->
+</SCRIPT>
 
 <script>
 function refreshData()
