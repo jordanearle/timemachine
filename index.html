@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Time Machine</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://use.typekit.net/isv5xtu.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <SCRIPT LANGUAGE="JavaScript">
+<!--
+////////////////////////////////////////
+// F. Permadi 2002
+////////////////////////////////////////
+var text="NTSTATUS __stdcall KeWaitForSingleObject(PVOID Object, KWAIT_REASON WaitReason, KPROCESSOR_MODE WaitMode, BOOLEAN Alertable, PLARGE_INTEGER Timeout)<br>\
+          NTSTATUS __stdcall ZwQueryValueKey(HANDLE KeyHandle, PUNICODE_STRING ValueName, KEY_VALUE_INFORMATION_CLASS KeyValueInformationClass, PVOID KeyValueInformation, ULONG Length, PULONG ResultLength)<br>\
+          NTSTATUS __stdcall ZwOpenKey(PHANDLE KeyHandle, ACCESS_MASK DesiredAccess, POBJECT_ATTRIBUTES ObjectAttributes)<br>\
+          // int __stdcall KeUnstackDetachProcess(_DWORD); weak<br>\
+          // int __stdcall KeStackAttachProcess(_DWORD, _DWORD); weak<br>\
+          // NTSTATUS __stdcall ZwQueryInformationProcess(HANDLE ProcessHandle, PROCESSINFOCLASS ProcessInformationClass, PVOID ProcessInformation, ULONG ProcessInformationLength, PULONG ReturnLength);<br>\
+          // int __stdcall ObOpenObjectByPointer(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD); weak\
+          NTSTATUS __stdcall KeWaitForSingleObject(PVOID Object, KWAIT_REASON WaitReason, KPROCESSOR_MODE WaitMode, BOOLEAN Alertable, PLARGE_INTEGER Timeout)<br>\
+                    NTSTATUS __stdcall ZwQueryValueKey(HANDLE KeyHandle, PUNICODE_STRING ValueName, KEY_VALUE_INFORMATION_CLASS KeyValueInformationClass, PVOID KeyValueInformation, ULONG Length, PULONG ResultLength)<br>\
+                    NTSTATUS __stdcall ZwOpenKey(PHANDLE KeyHandle, ACCESS_MASK DesiredAccess, POBJECT_ATTRIBUTES ObjectAttributes)<br>\
+                    // int __stdcall KeUnstackDetachProcess(_DWORD); weak"
+var delay=50;
+var currentChar=1;
+var destination="[none]";
+function type()
+{
+	//if (document.all)
+	{
+		var dest=document.getElementById(destination);
+		if (dest)// && dest.innerHTML)
+		{
+			dest.innerHTML=text.substr(0, currentChar)+"_";
+			currentChar++;
+			if (currentChar>text.length)
+			{
+				currentChar=1;
+				setTimeout("type()", 500000);
+			}
+			else
+			{
+				setTimeout("type()", delay);
+			}
+		}
+	}
+}
+
+function startTyping(textParam, delayParam, destinationParam)
+{
+	text=textParam;
+	delay=delayParam;
+	currentChar=1;
+	destination=destinationParam;
+	type();
+}
+//-->
+</SCRIPT>
+</head>
+
+<body id="timemachine">
+<div class="tvframe">
+  <p class="hersubtitle">the</p>
+  <p class="heromain">TIME MACHINE</p>
+  <div class="blocks">
+    <div id="blocktext1" class="block1">2</div>
+    <div id="blocktext2" class="block1">0</div>
+    <div class="blockdiv"></div>
+    <div id="blocktext3" class="block2">0</div>
+    <div id="blocktext4" class="block2">4</div>
+    <div class="blockdiv"></div>
+    <div id="blocktext5" class="block3">1</div>
+    <div id="blocktext6" class="block3">9</div>
+    <div id="blocktext7" class="block3">9</div>
+    <div id="blocktext8" class="block3">9</div>
+  </div>
+  <div class="divider"></div>
+  <a href="http://designshack.net/" class="button">BEGIN <span class="blinking-cursor">_</span> </a>
+  <p ID="textDestination" class="Console">...</p>
+</div>
+
+<script>
+function refreshData()
+{
+    x = 0.03;  // 5 Seconds
+document.getElementById("blocktext1").innerHTML =
+Math.floor(Math.random() * 4);
+
+document.getElementById("blocktext2").innerHTML =
+Math.floor(Math.random() * 10)
+
+document.getElementById("blocktext3").innerHTML =
+Math.floor(Math.random() * 2)
+
+document.getElementById("blocktext4").innerHTML =
+Math.floor(Math.random() * 10)
+
+document.getElementById("blocktext5").innerHTML =
+Math.floor(Math.random() * 10)
+
+document.getElementById("blocktext6").innerHTML =
+Math.floor(Math.random() * 10)
+
+document.getElementById("blocktext7").innerHTML =
+Math.floor(Math.random() * 10)
+
+document.getElementById("blocktext8").innerHTML =
+Math.floor(Math.random() * 10)
+
+    setTimeout(refreshData, x*1000);
+}
+refreshData(); // execute function
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+javascript:startTyping(text, 50, "textDestination");
+</SCRIPT>
+
+</body>
+</html>
