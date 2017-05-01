@@ -20,7 +20,7 @@
      				scaleControl: false,
      				disableDefaultUI: true,
 
-                     center: new google.maps.LatLng( 21.344257, -157.974140), 
+                     center: new google.maps.LatLng( 21.344257, -157.974140),
 
 
                      styles: [{"featureType":"all","elementType":"all","stylers":[{"saturation":"97"},{"lightness":"-49"},{"weight":"1.00"}]},{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"0"},{"color":"#00ff4c"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"},{"weight":"0.01"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":-2},{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":50},{"visibility":"simplified"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"hue":"#0B1E0C"},{"saturation":26},{"lightness":-91},{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"hue":"#0B1E0C"},{"saturation":37},{"lightness":-92},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":-36},{"visibility":"off"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":-36},{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":-41},{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":-22},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":-22},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":-35},{"visibility":"on"}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#00FF00"},{"saturation":100},{"lightness":-50},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#0B1E0C"},{"saturation":2},{"lightness":-89},{"visibility":"simplified"}]}]
@@ -38,7 +38,7 @@
 <body>
   <div class="timemachine" style="background-image:url(img/bg/pearlharbor.jpg);">
     <a href="../index.html" class="backbutton">RETURN HOME</a>
-    <a href="#" onClick=" Randomlink ();" class="forwardbutton">NEXT EVENT</a>
+    <a href="#" onClick=" randomLink ();" class="forwardbutton">NEXT EVENT</a>
     <p class="timeanddate">DATE: 07/12/1941 <span class="timespace"></span> LOCATION: PEARL HARBOR, HI</p>
     <div class="maincont">
       <div class="newspaper">
@@ -73,24 +73,42 @@
   </div>
 
   <SCRIPT Language="Javascript">
-  <!--
-  function Randomlink()
-  {
-      Url = new Array;
-      Url[1] = "../travel/jfk.html";
-      Url[2] = "../travel/tedbundy.html";
-      Url[3] = "../travel/columbine.html";
-      Url[4] = "../travel/moonlanding.html";
-      Url[5] = "../travel/tonyblair.html";
-      Url[6] = "../travel/hiroshima.html";
-      Url[7] = "../travel/hitler.html";
-      Url[8] = "../travel/pearlharbor.html";
-      Url[9] = "../travel/titanic.html";
-      Url[10] = "../travel/ww2.html";
-      Chooselink = Math.round(Math.random() * (Url.length+1));
-      window.open(Url[Chooselink],'_self');
-  }
-  //-->
-  </SCRIPT>
+    // Our links
+    let links = [
+        'columbine.html',
+        'harveymilk.html',
+        'hiroshima.html',
+        'hitler.html',
+        'jfk.html',
+        'marilyn.html',
+        'mlk.html',
+        'moonlanding.html',
+        'pearlharbor.html',
+        'rfk.html',
+        'roswell.html',
+        'sputnik.html',
+        'tedbundy.html',
+        'titanic.html',
+        'tonyblair.html',
+        'ww2.html'
+    ];
+
+    // Stores the last link selected to avoid double-matching
+    var lastLink = '';
+
+    function randomLink() {
+        while(true) {
+            let result = links[Math.round(Math.random() * (links.length - 1))];
+
+            if(result != lastLink) {
+                lastLink = result;
+
+                window.open(result, '_self');
+
+                break;
+            }
+        }
+    }
+    </SCRIPT>
 </body>
 </html>

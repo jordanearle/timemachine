@@ -38,7 +38,7 @@
 <body>
   <div class="timemachine" style="background-image:url(img/bg/moon.jpg);">
     <a href="../index.html" class="backbutton">RETURN HOME</a>
-    <a href="#" onClick=" Randomlink ();" class="forwardbutton">NEXT EVENT</a>
+    <a href="#" onClick=" randomLink ();" class="forwardbutton">NEXT EVENT</a>
     <p class="timeanddate">DATE: 21/06/1969 <span class="timespace"></span> LOCATION: HOUSTON, FLORIDA</p>
     <div class="maincont">
       <div class="newspaper">
@@ -72,24 +72,42 @@
   </div>
 
   <SCRIPT Language="Javascript">
-  <!--
-  function Randomlink()
-  {
-      Url = new Array;
-      Url[1] = "../travel/jfk.html";
-      Url[2] = "../travel/tedbundy.html";
-      Url[3] = "../travel/columbine.html";
-      Url[4] = "../travel/moonlanding.html";
-      Url[5] = "../travel/tonyblair.html";
-      Url[6] = "../travel/hiroshima.html";
-      Url[7] = "../travel/hitler.html";
-      Url[8] = "../travel/pearlharbor.html";
-      Url[9] = "../travel/titanic.html";
-      Url[10] = "../travel/ww2.html";
-      Chooselink = Math.round(Math.random() * (Url.length+1));
-      window.open(Url[Chooselink],'_self');
-  }
-  //-->
-  </SCRIPT>
+    // Our links
+    let links = [
+        'columbine.html',
+        'harveymilk.html',
+        'hiroshima.html',
+        'hitler.html',
+        'jfk.html',
+        'marilyn.html',
+        'mlk.html',
+        'moonlanding.html',
+        'pearlharbor.html',
+        'rfk.html',
+        'roswell.html',
+        'sputnik.html',
+        'tedbundy.html',
+        'titanic.html',
+        'tonyblair.html',
+        'ww2.html'
+    ];
+
+    // Stores the last link selected to avoid double-matching
+    var lastLink = '';
+
+    function randomLink() {
+        while(true) {
+            let result = links[Math.round(Math.random() * (links.length - 1))];
+
+            if(result != lastLink) {
+                lastLink = result;
+
+                window.open(result, '_self');
+
+                break;
+            }
+        }
+    }
+    </SCRIPT>
 </body>
 </html>
